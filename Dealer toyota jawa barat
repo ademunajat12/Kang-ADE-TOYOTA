@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toyota | Kang Ade Munajat</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+    header { background: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+    .hero { text-align: center; padding: 40px 20px; background: linear-gradient(#ffffff, #e8e8e8); }
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 18px; margin: 10px 0; }
+    .hero .cta { margin-top: 20px; }
+    .cta a { display: inline-block; padding: 12px 20px; margin: 5px; border-radius: 8px; font-weight: bold; text-decoration: none; }
+    .cta-red { background: #e53935; color: #fff; }
+    .cta-grey { background: #ddd; color: #000; }
+    .car-list { padding: 40px 20px; text-align: center; }
+    .car-list h2 { margin-bottom: 30px; }
+    .cars { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .car-card { background: #fff; padding: 20px; border-radius: 8px; width: 250px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .car-card img { width: 100%; height: auto; }
+    .car-card h3 { margin: 10px 0 5px; }
+    .car-card p { margin: 0 0 10px; color: #666; }
+    .car-card button { padding: 10px 20px; background: #444; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    footer { text-align: center; padding: 20px; font-size: 14px; color: #666; background: #fff; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.png" alt="Logo Toyota" width="100"></div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Mobil</a>
+      <a href="#">Promo</a>
+      <a href="#">Testimoni</a>
+      <a href="#">Hubungi Kami</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Beli Mobil Toyota di Auto2000?</h1>
+    <p>Promo DP Ringan, Cicilan Kecil, Proses Cepat!</p>
+    <div class="cta">
+      <a class="cta-red" href="https://wa.me/6285871555477" target="_blank">Hubungi Kang Ade: 0858-7155-5477</a>
+      <a class="cta-grey" href="#">Lihat Promo</a>
+    </div>
+    <img src="https://i.ibb.co/SymVGkn/lineup-mobil.png" alt="Lineup Mobil" style="width: 80%; margin-top: 30px;">
+  </section>
+
+  <section class="car-list">
+    <h2>Daftar Mobil</h2>
+    <div class="cars">
+      <div class="car-card">
+        <img src="https://i.ibb.co/tpxrHbZ/avanza.png" alt="Toyota Avanza">
+        <h3>Avanza</h3>
+        <p>Harga Mulai<br><strong>Rp 235.000.000</strong></p>
+        <button>Detail</button>
+      </div>
+      <div class="car-card">
+        <img src="https://i.ibb.co/tHw2tDc/raize.png" alt="Toyota Raize">
+        <h3>Raize</h3>
+        <p>Harga Mulai<br><strong>Rp 245.000.000</strong></p>
+        <button>Detail</button>
+      </div>
+      <div class="car-card">
+        <img src="https://i.ibb.co/CBMTYmc/zenix.png" alt="Innova Zenix">
+        <h3>Innova Zenix</h3>
+        <p>Harga Mulai<br><strong>Rp 420.000.000</strong></p>
+        <button>Detail</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Toyota | Kang Ade Munajat - Auto2000 Pal 2 Banjarmasin
+  </footer>
+
+</body>
+</html>
