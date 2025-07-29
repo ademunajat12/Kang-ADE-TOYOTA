@@ -71,11 +71,73 @@
         <button>Detail</button>
       </div>
     </div>
-  </section>
+  </section><section class="car-list">
+  <h2>Simulasi Kredit</h2>
+  <div style="max-width: 400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">
+    <form id="simulasiForm">
+      <label>Harga Mobil (Rp):</label><br/>
+      <input type="number" id="harga" placeholder="Misal: 235000000" required><br/><br/>
+
+      <label>Uang Muka / DP (Rp):</label><br/>
+      <input type="number" id="dp" placeholder="Misal: 50000000" required><br/><br/>
+
+      <label>Bunga (% per tahun):</label><br/>
+      <input type="number" id="bunga" value="5" required><br/><br/>
+
+      <label>Tenor (tahun):</label><br/>
+      <input type="number" id="tenor" value="5" required><br/><br/>
+
+      <button type="submit">Hitung Cicilan</button>
+    </form>
+    <div id="hasil" style="margin-top: 20px; font-weight: bold;"></div>
+  </div>
+</section>
+
+<section class="car-list">
+  <h2>Konsultasi / Hubungi Kami</h2>
+  <div style="max-width: 400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1);">
+    <form action="https://wa.me/6285871555477" method="get" target="_blank" onsubmit="return kirimWA();">
+      <label>Nama:</label><br/>
+      <input type="text" id="nama" placeholder="Nama Anda" required><br/><br/>
+
+      <label>No. HP:</label><br/>
+      <input type="text" id="nomor" placeholder="08xxxxxxxxxx" required><br/><br/>
+
+      <button type="submit">Konsultasi via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
 
   <footer>
     &copy; 2025 Toyota | Kang Ade Munajat - Auto2000 Pal 2 Banjarmasin
   </footer>
 
-</body>
+</body><script>
+  // Fungsi Simulasi Kredit
+  document.getElementById("simulasiForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let harga = parseInt(document.getElementById("harga").value);
+    let dp = parseInt(document.getElementById("dp").value);
+    let bunga = parseFloat(document.getElementById("bunga").value);
+    let tenor = parseInt(document.getElementById("tenor").value);
+
+    let pokokPinjaman = harga - dp;
+    let bungaTotal = pokokPinjaman * (bunga / 100) * tenor;
+    let totalBayar = pokokPinjaman + bungaTotal;
+    let cicilanBulanan = totalBayar / (tenor * 12);
+
+    document.getElementById("hasil").innerHTML = "Estimasi Cicilan per Bulan: <br><span style='color:green;'>Rp " + cicilanBulanan.toLocaleString() + "</span>";
+  });
+
+  // Fungsi Kirim WA
+  function kirimWA(085871555477) {
+    let nama = document.getElementById("nama").value;
+    let nomor = document.getElementById("nomor").value;
+    let link = `https://wa.me/6285871555477?text=Halo%20Kang%20Ade,%20saya%20${encodeURIComponent(nama)}.%20No%20HP%3A%20${encodeURIComponent(nomor)}.%20Saya%20ingin%20konsultasi%20pembelian%20mobil%20Toyota.`;
+    window.open(link, '_blank');
+    return false;
+  }
+</script>
+
 </html>
